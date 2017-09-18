@@ -1,0 +1,25 @@
+\documentclass{report}
+\usepackage{graphicx}
+\usepackage{YangTitle}
+\usepackage{setspace}
+\usepackage{makecell}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{lipsum}
+\doublespacing
+
+\begin{document}
+	\include{cover}
+	\include{contents}
+	\include{Chapter1}
+	\appendix
+	\include{AppA}
+	
+	
+	
+	\begin{singlespace}
+		\bibliography{main}
+		\bibliographystyle{unsrt}
+		\nocite{*}
+	\end{singlespace}
+\end{document}

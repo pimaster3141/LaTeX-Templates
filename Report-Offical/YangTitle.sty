@@ -1,0 +1,39 @@
+% Copyright note: This package defines how titles should
+% be typeset at the columbidae University
+% Please check for updates
+\ProvidesPackage{YangTitle}
+\newcommand*{\toptitle}[1]{\gdef\@toptitle{#1}}
+\newcommand*{\@toptitle}{ }
+\newcommand*{\foottitle}[1]{\gdef\@foottitle{#1}}
+\newcommand*{\@foottitle}{}
+\newcommand*{\midtitle}[1]{\gdef\@midtitle{#1}}
+\newcommand*{\@midtitle}{}
+\newcommand*{\logo}[1]
+	{\gdef\@logo{\raggedleft%
+		\includegraphics[width=3cm]{#1}\par
+	}\vspace{1cm}}
+
+\newcommand*{\@logo}{\vspace{1cm}}
+
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+\@logo
+\vspace{1cm}
+
+	\centering
+{\scshape\LARGE\@toptitle\strut\par}
+\vspace{1cm}
+{\scshape\Large\@midtitle\unskip\strut\par}
+\vspace{1.5cm}
+{\huge\bfseries\@title\unskip\strut\par}
+\vspace{2cm}
+{\Large\itshape\@author\unskip\strut\par}
+\vfill
+{\@foottitle\unskip\strut\par}
+
+\vfill
+
+{\large \@date\par}
+\end{titlepage}
+}
+\endinput
